@@ -14,12 +14,12 @@ const AppLayout = ({ children }) => {
         } z-50 transition-[left] duration-1000`}
       >
         <div
-          className={`fixed top-0 left-0 block lg:hidden w-full h-full min-h-screen -z-[9999] bg-black/50 ${
+          className={`fixed top-0 left-0 block lg:hidden w-full h-full min-h-screen -z-[999] bg-black/50 ${
             sidebar ? "visible opacity-100" : "invisible opacity-0"
           } transition-all duration-1000`}
           onClick={() => setSidebar(false)}
         ></div>
-        <div className="w-full bg-white dark:bg-black h-screen z-[9999]">
+        <div className="w-full bg-white dark:bg-black h-screen z-[999]">
           <Sidebar />
         </div>
       </div>
