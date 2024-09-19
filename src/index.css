@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    @apply bg-white dark:bg-black text-black dark:text-white;
+  }
+
+  p {
+    @apply text-black/60 dark:text-white/60
+  }
+
+  /* SCROLLBAR */
+  .scrollbar-y::-webkit-scrollbar {
+    @apply w-0.5;
+  }
+
+  .scrollbar-y::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-3xl;
+  }
+
+  .scrollbar-y::-webkit-scrollbar-thumb {
+    @apply bg-black dark:bg-white rounded-3xl;
+  }
+
+  .scrollbar-x::-webkit-scrollbar {
+    @apply h-0.5;
+  }
+
+  .scrollbar-x::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-3xl;
+  }
+
+  .scrollbar-x::-webkit-scrollbar-thumb {
+    @apply bg-black dark:bg-white rounded-3xl;
+  }
+
+  /* MENUS */
+  .menu-wrapper .menu-title {
+    @apply text-sm font-semibold mb-2;
+  }
+
+  .menu-wrapper .menu-item {
+    @apply block w-full;
+  }
+
+  .menu-wrapper .menu-link {
+    @apply block text-sm text-black/70 dark:text-white/50 font-normal py-1 hover:underline;
+  }
+
+  .menu-wrapper .menu-link.active {
+    @apply text-black dark:text-white font-medium;
+  }
+
+  .section {
+    @apply relative w-full py-10;
+  }
+}
