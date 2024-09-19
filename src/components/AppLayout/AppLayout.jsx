@@ -23,7 +23,7 @@ const AppLayout = ({ children }) => {
           <Sidebar />
         </div>
       </div>
-      <div className="absolute left-64 top-0 w-[calc(100%-256px)] h-full max-lg:left-0 max-lg:w-full overflow-y-auto transition-[left] duration-1000">
+      <div className="absolute left-64 top-0 w-[calc(100%-256px)] h-full max-h-screen max-lg:left-0 max-lg:w-full overflow-y-auto transition-[left] duration-1000">
         <Header setSidebar={setSidebar} />
         {children}
         <Footer />
