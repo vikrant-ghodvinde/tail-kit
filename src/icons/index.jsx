@@ -1,4 +1,4 @@
-import { ChevronRight, Menu, Moon, Sun } from "lucide-react";
+import { Check, ChevronRight, Clipboard, Menu, Moon, Sun } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const LightThemeIcon = (props) => {
@@ -23,4 +23,12 @@ export const LinkedinIcon = (props) => {
 
 export const ChevronRightIcon = (props) => {
   return <ChevronRight {...props} />;
+};
+
+export const ClipboardIcon = (props) => {
+  return <Clipboard {...props} />;
+};
+
+export const CheckIcon = (props) => {
+  return <Check {...props} />;
 };

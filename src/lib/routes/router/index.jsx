@@ -6,7 +6,8 @@ import Components from "@/pages/Components/Components";
 import Button from "@/pages/Components/elements/Button/Button";
 import Badge from "@/pages/Components/elements/Badge/Badge";
 import Avatar from "@/pages/Components/elements/Avatar/Avatar";
-import Introduction from "@/pages/Components/docs/Introduction/Introduction";
+import Introduction from "@/pages/Docs/Introduction/Introduction";
+import Colors from "@/pages/Docs/Colors/Colors";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -19,20 +20,30 @@ const Router = () => {
             </Suspense>
           }
         />
+        <Route path="/docs">
+          <Route
+            path="introduction"
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Introduction />
+              </Suspense>
+            }
+          />
+          <Route
+            path="colors"
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Colors />
+              </Suspense>
+            }
+          />
+        </Route>
+
         <Route
           path={PATH.COMPONENTS}
           element={
             <Suspense fallback={"...Loading"}>
               <Components />
-            </Suspense>
-          }
-        />
-
-        <Route
-          path="/introduction"
-          element={
-            <Suspense fallback={"...Loading"}>
-              <Introduction />
             </Suspense>
           }
         />

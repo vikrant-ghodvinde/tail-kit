@@ -1,16 +1,19 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
+  darkMode: ["class"],
   theme: {
     container: {
-      center: true,
+      center: "true",
       padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
     },
-    extend: {},
+    extend: {
+      colors: {},
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

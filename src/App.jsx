@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Router from "./lib/routes/router";
+import { Toaster } from "./ui/components/ui/sonner";
 
 function App() {
   // THEME MODE
@@ -10,7 +11,12 @@ function App() {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
   }, [darkMode]);
-  return <Router />;
+  return (
+    <React.Fragment>
+      <Toaster />
+      <Router />
+    </React.Fragment>
+  );
 }
 
 export default App;

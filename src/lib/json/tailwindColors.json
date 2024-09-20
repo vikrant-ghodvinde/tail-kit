@@ -1,0 +1,84 @@
+[
+  {
+    "title": "slate",
+    "colors": [
+      {
+        "name": "slate-50",
+        "className": "slate-50",
+        "hex": "#f8fafc",
+        "rgb": "248 250 252",
+        "hsl": "210 40% 98%"
+      },
+      {
+        "name": "slate-100",
+        "className": "slate-100",
+        "hex": "#f1f5f9",
+        "rgb": "241 245 249",
+        "hsl": "210 40% 96.1%"
+      },
+      {
+        "name": "slate-200",
+        "className": "slate-200",
+        "hex": "#e2e8f0",
+        "rgb": "226 232 240",
+        "hsl": "214.3 31.8% 91.4%"
+      },
+      {
+        "name": "slate-300",
+        "className": "slate-300",
+        "hex": "#cbd5e1",
+        "rgb": "203 213 225",
+        "hsl": "212.7 26.8% 83.9%"
+      },
+      {
+        "name": "slate-400",
+        "className": "slate-400",
+        "hex": "#94a3b8",
+        "rgb": "148 163 184",
+        "hsl": "215 20.2% 65.1%"
+      },
+      {
+        "name": "slate-500",
+        "className": "slate-500",
+        "hex": "#64748b",
+        "rgb": "100 116 139",
+        "hsl": "215.4 16.3% 46.9%"
+      },
+      {
+        "name": "slate-600",
+        "className": "slate-600",
+        "hex": "#475569",
+        "rgb": "71 85 105",
+        "hsl": "215.3 19.3% 34.5%"
+      },
+      {
+        "name": "slate-700",
+        "className": "slate-700",
+        "hex": "#334155",
+        "rgb": "51 65 85",
+        "hsl": "215.3 25% 26.7%"
+      },
+      {
+        "name": "slate-800",
+        "className": "slate-800",
+        "hex": "#1e293b",
+        "rgb": "30 41 59",
+        "hsl": "217.2 32.6% 17.5%"
+      },
+      {
+        "name": "slate-900",
+        "className": "slate-900",
+        "hex": "#0f172a",
+        "rgb": "15 23 42",
+        "hsl": "222.2 47.4% 11.2%"
+      },
+      {
+        "name": "slate-950",
+        "className": "slate-950",
+        "hex": "#020617",
+        "rgb": "2 6 23",
+        "hsl": "222.2 84% 4.9%"
+      }
+    ]
+  }
+]
