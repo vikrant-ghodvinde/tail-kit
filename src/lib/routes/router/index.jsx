@@ -20,9 +20,10 @@ const Router = () => {
             </Suspense>
           }
         />
-        <Route path="/docs">
+        
+        <Route path={PATH.DOCS}>
           <Route
-            path="introduction"
+            path={PATH.INTRODUCTION}
             element={
               <Suspense fallback={"...Loading"}>
                 <Introduction />
@@ -30,7 +31,7 @@ const Router = () => {
             }
           />
           <Route
-            path="colors"
+            path={PATH.COLORS}
             element={
               <Suspense fallback={"...Loading"}>
                 <Colors />
@@ -39,18 +40,9 @@ const Router = () => {
           />
         </Route>
 
-        <Route
-          path={PATH.COMPONENTS}
-          element={
-            <Suspense fallback={"...Loading"}>
-              <Components />
-            </Suspense>
-          }
-        />
-
-        <Route path={PATH.COMPONENTS}>
+        <Route path="">
           <Route
-            path={PATH.ELEMENTS.AVATARS}
+            path=""
             element={
               <Suspense fallback={"...Loading"}>
                 <Avatar />
@@ -58,7 +50,7 @@ const Router = () => {
             }
           />
           <Route
-            path={PATH.ELEMENTS.BADGES}
+            path=""
             element={
               <Suspense fallback={"...Loading"}>
                 <Badge />
@@ -66,7 +58,7 @@ const Router = () => {
             }
           />
           <Route
-            path={PATH.ELEMENTS.BUTTONS}
+            path=""
             element={
               <Suspense fallback={"...Loading"}>
                 <Button />

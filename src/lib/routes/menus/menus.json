@@ -1,0 +1,36 @@
+[
+  {
+    "menuTitle": "Getting Started",
+    "path": "/docs",
+    "menu": [
+      { "name": "Introduction", "path": "/docs/introduction" },
+      { "name": "Installation", "path": "/docs/installation" },
+      { "name": "Components", "path": "/docs/components" },
+      { "name": "Typography", "path": "/docs/typography" },
+      { "name": "Colors", "path": "/docs/colors" }
+    ]
+  },
+  {
+    "menuTitle": "Installation",
+    "path": "/docs/installation",
+    "menu": [
+      { "name": "Next.js", "path": "/docs/installation/next" },
+      { "name": "Vite", "path": "/docs/installation/vite" },
+      { "name": "HTML", "path": "/docs/installation/html" }
+    ]
+  },
+  {
+    "menuTitle": "Components",
+    "path": "/docs/components",
+    "menu": [
+      { "name": "Alert", "path": "/docs/components/alert" },
+      { "name": "Avatar", "path": "/docs/components/avatar" },
+      { "name": "Badge", "path": "/docs/components/badge" },
+      { "name": "Breadcrumb", "path": "/docs/components/breadcrumb" },
+      { "name": "Button", "path": "/docs/components/button" },
+      { "name": "Card", "path": "/docs/components/card" },
+      { "name": "Checkbox", "path": "/docs/components/checkbox" },
+      { "name": "Input", "path": "/docs/components/input" }
+    ]
+  }
+]

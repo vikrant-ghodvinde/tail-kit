@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import menus from "@/lib/routes/menus/menus.json";
 
 const Sidebar = () => {
+  const location = useLocation();
   const darkMode = useSelector((state) => state.darkMode);
   return (
     <div className="relative w-full h-full">
@@ -19,91 +21,25 @@ const Sidebar = () => {
       </div>
       <div className="relative w-full h-[calc(100%-64px)] overflow-y-auto scrollbar-y">
         <div className="grid grid-cols-1 gap-y-5 p-10">
-          <div className="relative menu-wrapper">
-            <h6 className="menu-title">Getting Started</h6>
-            <ul className="relative">
-              <li className="menu-item">
-                <Link to="" className="menu-link active">
-                  Introduction
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Installation
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Typography
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Colors
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="relative menu-wrapper">
-            <h6 className="text-sm font-semibold mb-2">Installation</h6>
-            <ul>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Next.js
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Vite
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  HTML
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="relative menu-wrapper">
-            <h6 className="text-sm font-semibold mb-2">Components</h6>
-            <ul>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Alert
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Avatar
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Badge
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Breadcrumb
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Button
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Card
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="" className="menu-link">
-                  Checkbox
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {menus?.map((menuItem, index) => (
+            <div className="relative menu-wrapper" key={index}>
+              <h6 className="menu-title">{menuItem.menuTitle}</h6>
+              <ul className="relative">
+                {menuItem?.menu.map((item, index) => (
+                  <li className="menu-item" key={index}>
+                    <Link
+                      to={item?.path}
+                      className={`menu-link ${
+                        location.pathname === item?.path ? "active" : ""
+                      }`}
+                    >
+                      {item?.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>
