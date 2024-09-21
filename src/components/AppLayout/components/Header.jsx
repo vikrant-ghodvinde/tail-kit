@@ -14,7 +14,7 @@ const Header = ({ setSidebar }) => {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.darkMode);
   return (
-    <header className="sticky top-0 left-0 w-full h-16 bg-white dark:bg-black border-b border-b-black/5 dark:border-b-white/15 z-40">
+    <header className="sticky top-0 left-0 w-full h-16 backdrop-blur bg-white/60 dark:bg-black/60 border-b border-b-black/5 dark:border-b-white/15 z-40">
       <div className="container">
         <nav className="flex items-center justify-between gap-5 py-3">
           <Link to="/" className="inline-flex items-center">
