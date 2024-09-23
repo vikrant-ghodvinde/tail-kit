@@ -1,17 +1,15 @@
-/* eslint-disable react/prop-types */
 import {
   DarkThemeIcon,
   GithubIcon,
   LightThemeIcon,
   LinkedinIcon,
-  MenuIcon,
 } from "@/icons";
 import { setTheme } from "@/lib/redux/reducers/appReducer";
 import { PATH, SOCIALPATH } from "@/lib/routes/path";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Header = ({ setSidebar }) => {
+const Header = () => {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.darkMode);
   return (
@@ -19,7 +17,7 @@ const Header = ({ setSidebar }) => {
       <div className="container">
         <nav className="flex items-center justify-between gap-5 py-3">
           <Link to={PATH.HOME} className="inline-flex items-center">
-            <span className="hidden max-lg:inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2">
               <img
                 src={`/assets/images/${
                   darkMode ? "logo-white.png" : "logo.png"
@@ -57,13 +55,6 @@ const Header = ({ setSidebar }) => {
               ) : (
                 <DarkThemeIcon size={18} />
               )}
-            </button>
-            <button
-              type="button"
-              className="hidden max-lg:inline-flex items-center justify-center w-8 h-8"
-              onClick={() => setSidebar(true)}
-            >
-              <MenuIcon size={20} />
             </button>
           </div>
         </nav>

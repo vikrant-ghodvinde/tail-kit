@@ -1,4 +1,5 @@
 import { GithubIcon, LinkedinIcon } from "@/icons";
+import { SOCIALPATH } from "@/lib/routes/path";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
           <div className="relative">
             <div className="flex items-center justify-center gap-1">
               <Link
-                to="https://github.com/vikrant-ghodvinde/"
+                to={SOCIALPATH.GITHUB}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-8 h-8"
@@ -20,7 +21,7 @@ const Footer = () => {
                 <GithubIcon size={18} />
               </Link>
               <Link
-                to="https://www.linkedin.com/in/vikrant-ghodvinde-2224a1287/"
+                to={SOCIALPATH.LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-8 h-8"

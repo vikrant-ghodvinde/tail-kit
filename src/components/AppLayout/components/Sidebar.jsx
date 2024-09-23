@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import menus from "@/lib/routes/menus/menus.json";
+import { PATH } from "@/lib/routes/path";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -9,7 +10,7 @@ const Sidebar = () => {
     <div className="relative w-full h-full">
       <div className="w-full h-16 flex items-center border-b border-b-black/5 dark:border-b-white/15">
         <div className="container">
-          <Link to="/" className="inline-flex items-center gap-2">
+          <Link to={PATH.HOME} className="inline-flex items-center gap-2">
             <img
               src={`/assets/images/${darkMode ? "logo-white.png" : "logo.png"}`}
               alt="logo"

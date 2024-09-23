@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATH } from "../path";
 import Home from "@/pages/Home/Home";
-import Components from "@/pages/Components/Components";
+// import Components from "@/pages/Components/Components";
 import Button from "@/pages/Components/elements/Button/Button";
 import Badge from "@/pages/Components/elements/Badge/Badge";
 import Avatar from "@/pages/Components/elements/Avatar/Avatar";
@@ -20,7 +20,7 @@ const Router = () => {
             </Suspense>
           }
         />
-        
+
         <Route path={PATH.DOCS}>
           <Route
             path={PATH.INTRODUCTION}
