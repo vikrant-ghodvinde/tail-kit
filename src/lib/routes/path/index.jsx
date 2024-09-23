@@ -4,12 +4,29 @@ export const HOMEPATH = {
 
 export const PATH = {
   HOME: "/",
-  DOCS: "/docs",
-  INTRODUCTION: "introduction",
-  INSTALLATION: "installation",
-  COMPONENTS: "components",
-  TYPOGRAPHY: "typography",
-  COLORS: "colors",
+  DOCS: {
+    PARENT: "/docs",
+    CHILDREN: {
+      INTRODUCTION: "introduction",
+      INSTALLATION: "installation",
+      COMPONENTS: "components",
+      TYPOGRAPHY: "typography",
+      COLORS: "colors",
+    },
+  },
+  // INSTALLATION: {
+  //   PARENT: "/docs/installation",
+  //   CHILDREN: {
+
+  //   },
+  // },
+  COMPONENTS: {
+    PARENT: "/docs/components",
+    CHILDREN: {
+      ALERT: "alert",
+      AVATAR: "avatar",
+    },
+  },
 };
 
 export const SOCIALPATH = {

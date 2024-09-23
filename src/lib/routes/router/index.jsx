@@ -6,8 +6,9 @@ import Home from "@/pages/Home/Home";
 import Button from "@/pages/Components/elements/Button/Button";
 import Badge from "@/pages/Components/elements/Badge/Badge";
 import Avatar from "@/pages/Components/elements/Avatar/Avatar";
-import Introduction from "@/pages/Docs/Introduction/Introduction";
-import Colors from "@/pages/Docs/Colors/Colors";
+import Introduction from "@/pages/GettingStarted/Introduction/Introduction";
+import Colors from "@/pages/GettingStarted/Colors/Colors";
+import Alert from "@/pages/Components/elements/Alert/Alert";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -21,9 +22,10 @@ const Router = () => {
           }
         />
 
-        <Route path={PATH.DOCS}>
+        {/* GETTING STARTED ROUTES */}
+        <Route path={PATH.DOCS.PARENT}>
           <Route
-            path={PATH.INTRODUCTION}
+            path={PATH.DOCS.CHILDREN.INTRODUCTION}
             element={
               <Suspense fallback={"...Loading"}>
                 <Introduction />
@@ -31,7 +33,7 @@ const Router = () => {
             }
           />
           <Route
-            path={PATH.COLORS}
+            path={PATH.DOCS.CHILDREN.COLORS}
             element={
               <Suspense fallback={"...Loading"}>
                 <Colors />
@@ -40,9 +42,18 @@ const Router = () => {
           />
         </Route>
 
-        <Route path="">
+        {/* COMPONENTS ROUTES */}
+        <Route path={PATH.COMPONENTS.PARENT}>
           <Route
-            path=""
+            path={PATH.COMPONENTS.CHILDREN.ALERT}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Alert />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.COMPONENTS.CHILDREN.AVATAR}
             element={
               <Suspense fallback={"...Loading"}>
                 <Avatar />
