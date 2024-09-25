@@ -24,7 +24,8 @@ const Home = () => {
                   <span className="lowercase">Tail-Kit</span> offers a
                   comprehensive collection of free design components and UI
                   elements tailored specifically for Tailwind CSS projects.
-                  Built on top of Tailwind CSS 3.4 and higher, Tail-Kit provides
+                  Built on top of Tailwind CSS 3.4 and higher,{" "}
+                  <span className="lowercase">Tail-Kit</span> provides
                   developers with a seamless and modern approach to building
                   responsive, highly customizable interfaces. Whether you're
                   working with HTML, ReactJS, Next.js, Vue.js, or Angular, these

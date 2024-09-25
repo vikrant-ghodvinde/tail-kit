@@ -14,9 +14,13 @@
     "menuTitle": "Installation",
     "path": "/docs/installation",
     "menu": [
+      { "name": "HTML", "path": "/docs/installation/html" },
       { "name": "Next.js", "path": "/docs/installation/next" },
       { "name": "Vite", "path": "/docs/installation/vite" },
-      { "name": "HTML", "path": "/docs/installation/html" }
+      { "name": "Manual", "path": "/docs/installation/manual" },
+      { "name": "Laravel", "path": "/docs/installation/laravel" },
+      { "name": "Nuxt", "path": "/docs/installation/nuxt" },
+      { "name": "Gatsby", "path": "/docs/installation/gatsby" }
     ]
   },
   {

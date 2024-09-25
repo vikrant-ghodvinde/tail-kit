@@ -9,6 +9,14 @@ import Avatar from "@/pages/Components/elements/Avatar/Avatar";
 import Introduction from "@/pages/GettingStarted/Introduction/Introduction";
 import Colors from "@/pages/GettingStarted/Colors/Colors";
 import Alert from "@/pages/Components/elements/Alert/Alert";
+import Installation from "@/pages/GettingStarted/Installation/Installation";
+import HTMLInstallation from "@/pages/Installation/HTMLInstallation/HTMLInstallation";
+import NextInstallation from "@/pages/Installation/NextInstallation/NextInstallation";
+import ViteInstallation from "@/pages/Installation/ViteInstallation/ViteInstallation";
+import ManualInstallation from "@/pages/Installation/ManualInstallation/ManualInstallation";
+import LaravelInstallation from "@/pages/Installation/LaravelInstallation/LaravelInstallation";
+import NuxtInstallation from "@/pages/Installation/NuxtInstallation/NuxtInstallation";
+import GatsbyInstallation from "@/pages/Installation/GatsbyInstallation/GatsbyInstallation";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -33,10 +41,78 @@ const Router = () => {
             }
           />
           <Route
+            path={PATH.DOCS.CHILDREN.INSTALLATION}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Installation />
+              </Suspense>
+            }
+          />
+          <Route
             path={PATH.DOCS.CHILDREN.COLORS}
             element={
               <Suspense fallback={"...Loading"}>
                 <Colors />
+              </Suspense>
+            }
+          />
+        </Route>
+
+        {/* COMPONENTS ROUTES */}
+        <Route path={PATH.INSTALLATION.PARENT}>
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.HTML}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <HTMLInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.NEXT}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <NextInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.VITE}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <ViteInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.MANUAL}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <ManualInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.LARAVEL}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <LaravelInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.NUXT}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <NuxtInstallation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.INSTALLATION.CHILDREN.GATSBY}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <GatsbyInstallation />
               </Suspense>
             }
           />

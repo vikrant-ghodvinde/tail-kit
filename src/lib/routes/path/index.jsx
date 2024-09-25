@@ -14,12 +14,18 @@ export const PATH = {
       COLORS: "colors",
     },
   },
-  // INSTALLATION: {
-  //   PARENT: "/docs/installation",
-  //   CHILDREN: {
-
-  //   },
-  // },
+  INSTALLATION: {
+    PARENT: "/docs/installation",
+    CHILDREN: {
+      HTML: "html",
+      NEXT: "next",
+      VITE: "vite",
+      MANUAL: "manual",
+      LARAVEL: "laravel",
+      NUXT: "nuxt",
+      GATSBY: "gatsby",
+    },
+  },
   COMPONENTS: {
     PARENT: "/docs/components",
     CHILDREN: {
