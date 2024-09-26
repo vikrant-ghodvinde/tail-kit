@@ -68,7 +68,7 @@ const HTMLInstallation = () => {
                     title="tailwind.config.js"
                     text={`/** @type {import('tailwindcss').Config} */
                           module.exports = {
-                            content: ["./src/**/*.{html,js}"],
+                            content: ["./**/*.{html,js}"],
                             theme: {
                               extend: {},
                             },
@@ -82,7 +82,7 @@ const HTMLInstallation = () => {
                         </span>
                         <span className="block">{"module.exports = {"}</span>
                         <span className="block">
-                          {'content: ["./src/**/*.{html,js}"],'}
+                          {'content: ["./**/*.{html,js}"],'}
                         </span>
                         <span className="block">{"theme: {"}</span>
                       </div>
