@@ -1,3 +1,7 @@
+import { CheckIcon, ClipboardIcon } from "@/icons";
+import { useState } from "react";
+import { toast } from "sonner";
+
 /* eslint-disable react/prop-types */
 const InstallationList = ({ children }) => {
   return (
@@ -28,9 +32,36 @@ const InstallationItemDescription = ({ children }) => {
   return <p className="text-sm">{children}</p>;
 };
 
+const InstallationItemDemo = ({ children, title, text }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    toast.success(`Copied to clipboard.`);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1500);
+  };
+  return (
+    <div className="relative w-full bg-neutral-900 border border-neutral-900 rounded-lg mt-5">
+      <div className="relative w-full p-3 px-4 flex items-center justify-between border-b border-b-white/20">
+        <div className="text-sm font-medium text-white">{title}</div>
+        <button type="button" className="text-white" onClick={handleCopy}>
+          {copied ? <CheckIcon size={14} /> : <ClipboardIcon size={14} />}
+        </button>
+      </div>
+      <div className="relative w-full p-4 text-white text-sm font-lights">
+        {children}
+      </div>
+    </div>
+  );
+};
+
 export {
   InstallationList,
   InstallationItem,
   InstallationItemTitle,
   InstallationItemDescription,
+  InstallationItemDemo,
 };

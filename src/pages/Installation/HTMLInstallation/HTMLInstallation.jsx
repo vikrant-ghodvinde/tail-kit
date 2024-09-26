@@ -2,10 +2,12 @@ import AppBreadcrumb from "@/components/AppBreadcrumb/AppBreadcrumb";
 import AppLayout from "@/components/AppLayout/AppLayout";
 import {
   InstallationItem,
+  InstallationItemDemo,
   InstallationItemDescription,
   InstallationItemTitle,
   InstallationList,
 } from "@/components/InstallationProcess/InstallationProcess";
+import { ChevronRightIcon } from "@/icons";
 
 const HTMLInstallation = () => {
   return (
@@ -33,6 +35,21 @@ const HTMLInstallation = () => {
                     npm, and create your{" "}
                     <code className="underline">tailwind.config.js</code> file.
                   </InstallationItemDescription>
+                  <InstallationItemDemo
+                    title="Terminal"
+                    text={`To install Tailwind CSS, run the following commands:
+                      npm install -D tailwindcss
+                      npx tailwindcss init`}
+                  >
+                    <span className="flex items-center gap-1">
+                      <ChevronRightIcon size={14} />{" "}
+                      <code>npm install -D tailwindcss</code>
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <ChevronRightIcon size={14} />{" "}
+                      <code>npx tailwindcss init</code>
+                    </span>
+                  </InstallationItemDemo>
                 </InstallationItem>
                 <InstallationItem>
                   <InstallationItemTitle>
