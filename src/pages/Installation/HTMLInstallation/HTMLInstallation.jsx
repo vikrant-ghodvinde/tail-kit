@@ -83,7 +83,7 @@ const HTMLInstallation = () => {
                     <span className="block">
                       <code>{"theme: {"}</code>
                     </span>
-                    <div className="ms-4">
+                    <div className="ps-4">
                       <span className="block">
                         <code>{"extend: {},"}</code>
                       </span>
@@ -181,7 +181,7 @@ const HTMLInstallation = () => {
                     <span className="block">
                       <code>{"<head>"}</code>
                     </span>
-                    <div className="ms-4">
+                    <div className="ps-4">
                       <span className="block">
                         <code>{'<meta charset="UTF-8" />'}</code>
                       </span>
@@ -204,13 +204,13 @@ const HTMLInstallation = () => {
                     <span className="block">
                       <code>{"<body>"}</code>
                     </span>
-                    <div className="ms-4">
+                    <div className="ps-4">
                       <span className="block">
                         <code>
                           {'<h1 class="text-3xl font-bold underline">s'}
                         </code>
                       </span>
-                      <span className="block ms-4">
+                      <span className="block ps-4">
                         <code>{"Hello world!"}</code>
                       </span>
                       <span className="block">
