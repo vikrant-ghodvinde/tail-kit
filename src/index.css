@@ -54,7 +54,7 @@
   }
 
   .scrollbar-box-x::-webkit-scrollbar-thumb {
-    @apply bg-neutral-500 rounded-3xl;
+    @apply bg-neutral-700 rounded-3xl;
   }
 
   /* MENUS */
