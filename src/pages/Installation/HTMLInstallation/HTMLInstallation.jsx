@@ -40,14 +40,20 @@ const HTMLInstallation = () => {
                     text={`npm install -D tailwindcss
                       npx tailwindcss init`}
                   >
-                    <span className="flex items-center gap-1">
-                      <ChevronRightIcon size={14} />{" "}
-                      <code>{"npm install -D tailwindcss"}</code>
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <ChevronRightIcon size={14} />{" "}
-                      <code>{"npx tailwindcss init"}</code>
-                    </span>
+                    <div className="relative w-full">
+                      <div className="flex items-center">
+                        <span className="mt-0.5 mr-2">
+                          <ChevronRightIcon size={14} />
+                        </span>
+                        <span>{"npm install -D tailwindcss"}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="mt-0.5 mr-2">
+                          <ChevronRightIcon size={14} />
+                        </span>
+                        <span>{"npx tailwindcss init"}</span>
+                      </div>
+                    </div>
                   </InstallationItemDemo>
                 </InstallationItem>
                 <InstallationItem>
@@ -69,34 +75,26 @@ const HTMLInstallation = () => {
                             plugins: [],
                           }`}
                   >
-                    <span className="block text-neutral-400">
-                      <code>
-                        {"/** @type {import('tailwindcss').Config} */"}
-                      </code>
-                    </span>
-                    <span className="block">
-                      <code>{"module.exports = {"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{'content: ["./src/**/*.{html,js}"],'}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"theme: {"}</code>
-                    </span>
-                    <div className="ps-4">
-                      <span className="block">
-                        <code>{"extend: {},"}</code>
-                      </span>
-                      <span className="block">
-                        <code>{"},"}</code>
-                      </span>
-                      <span className="block">
-                        <code>{"plugins: [],"}</code>
-                      </span>
+                    <div className="relative w-full">
+                      <div className="block">
+                        <span className="block text-neutral-400">
+                          {"/** @type {import('tailwindcss').Config} */"}
+                        </span>
+                        <span className="block">{"module.exports = {"}</span>
+                        <span className="block">
+                          {'content: ["./src/**/*.{html,js}"],'}
+                        </span>
+                        <span className="block">{"theme: {"}</span>
+                      </div>
+                      <div className="relative w-full ps-4">
+                        <span className="block">{"extend: {},"}</span>
+                        <span className="block">{"},"}</span>
+                        <span className="block">{"plugins: [],"}</span>
+                      </div>
+                      <div className="relative w-full">
+                        <span className="block">{"}"}</span>
+                      </div>
                     </div>
-                    <span className="block">
-                      <code>{"}"}</code>
-                    </span>
                   </InstallationItemDemo>
                 </InstallationItem>
                 <InstallationItem>
@@ -114,15 +112,13 @@ const HTMLInstallation = () => {
                           @tailwind components;
                           @tailwind utilities;`}
                   >
-                    <span className="block">
-                      <code>{"@tailwind base;"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"@tailwind components;"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"@tailwind utilities;"}</code>
-                    </span>
+                    <div className="relative w-full">
+                      <div className="block">
+                        <span className="block">{"@tailwind base;"}</span>
+                        <span className="block">{"@tailwind components;"}</span>
+                        <span className="block">{"@tailwind utilities;"}</span>
+                      </div>
+                    </div>
                   </InstallationItemDemo>
                 </InstallationItem>
                 <InstallationItem>
@@ -137,14 +133,18 @@ const HTMLInstallation = () => {
                     title="Terminal"
                     text={`npx tailwindcss -i ./css/input.css -o ./css/output.css --watch`}
                   >
-                    <span className="flex items-center gap-1">
-                      <ChevronRightIcon size={14} />{" "}
-                      <code>
-                        {
-                          "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch"
-                        }
-                      </code>
-                    </span>
+                    <div className="relative w-full">
+                      <div className="flex items-center">
+                        <span className="mt-0.5 mr-2">
+                          <ChevronRightIcon size={14} />
+                        </span>
+                        <span>
+                          {
+                            "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+                          }
+                        </span>
+                      </div>
+                    </div>
                   </InstallationItemDemo>
                 </InstallationItem>
                 <InstallationItem>
@@ -172,57 +172,43 @@ const HTMLInstallation = () => {
                           </body>
                           </html>`}
                   >
-                    <span className="block">
-                      <code>{"<!doctype html>"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"<html>"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"<head>"}</code>
-                    </span>
-                    <div className="ps-4">
-                      <span className="block">
-                        <code>{'<meta charset="UTF-8" />'}</code>
-                      </span>
-                      <span className="block">
-                        <code>
+                    <div className="relative w-full">
+                      <div className="block">
+                        <span className="block">{"<!doctype html>"}</span>
+                        <span className="block">{"<html>"}</span>
+                        <span className="block">{"<head>"}</span>
+                      </div>
+                      <div className="block ps-4">
+                        <span className="block">
+                          {'<meta charset="UTF-8" />'}
+                        </span>
+                        <span className="block">
                           {
                             '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
                           }
-                        </code>
-                      </span>
-                      <span className="block">
-                        <code>
+                        </span>
+                        <span className="block">
                           {'<link href="./css/output.css" rel="stylesheet" />'}
-                        </code>
-                      </span>
+                        </span>
+                      </div>
+                      <div className="block">
+                        <span className="block">{"</head>"}</span>
+                        <span className="block">{"<body>"}</span>
+                      </div>
+                      <div className="block ps-4">
+                        <span className="block">
+                          {'<h1 class="text-3xl font-bold underline">'}
+                        </span>
+                        <div className="block ps-4">
+                          <span className="block">{"Hello world!"}</span>
+                        </div>
+                        <span className="block">{"</h1>"}</span>
+                      </div>
+                      <div className="block">
+                        <span className="block">{"</body>"}</span>
+                        <span className="block">{"</html>"}</span>
+                      </div>
                     </div>
-                    <span className="block">
-                      <code>{"</head>"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"<body>"}</code>
-                    </span>
-                    <div className="ps-4">
-                      <span className="block">
-                        <code>
-                          {'<h1 class="text-3xl font-bold underline">s'}
-                        </code>
-                      </span>
-                      <span className="block ps-4">
-                        <code>{"Hello world!"}</code>
-                      </span>
-                      <span className="block">
-                        <code>{"</h1>"}</code>
-                      </span>
-                    </div>
-                    <span className="block">
-                      <code>{"</body>"}</code>
-                    </span>
-                    <span className="block">
-                      <code>{"</html>"}</code>
-                    </span>
                   </InstallationItemDemo>
                 </InstallationItem>
               </InstallationList>
