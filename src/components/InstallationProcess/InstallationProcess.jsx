@@ -46,12 +46,12 @@ const InstallationItemDemo = ({ children, title, text }) => {
   return (
     <div className="relative w-full bg-neutral-900 border border-neutral-900 rounded-lg mt-5">
       <div className="relative w-full p-3 px-4 flex items-center justify-between border-b border-b-white/20">
-        <div className="text-sm font-medium text-white">{title}</div>
+        <div className="text-xs font-medium text-white">{title}</div>
         <button type="button" className="text-white" onClick={handleCopy}>
           {copied ? <CheckIcon size={14} /> : <ClipboardIcon size={14} />}
         </button>
       </div>
-      <div className="relative w-full p-4 text-white text-sm font-lights">
+      <div className="relative w-full p-4 text-white text-sm font-light leading-relaxed overflow-x-auto scrollbar-x">
         {children}
       </div>
     </div>
