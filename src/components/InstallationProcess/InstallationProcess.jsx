@@ -51,7 +51,7 @@ const InstallationItemDemo = ({ children, title, text }) => {
           {copied ? <CheckIcon size={14} /> : <ClipboardIcon size={14} />}
         </button>
       </div>
-      <div className="relative w-full p-4 text-white text-sm font-light leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-x">
+      <div className="relative w-full p-4 text-white text-sm font-light leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-box-x">
         {children}
       </div>
     </div>
