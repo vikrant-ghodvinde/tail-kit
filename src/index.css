@@ -30,10 +30,6 @@
   }
 
   .scrollbar-x::-webkit-scrollbar {
-    @apply h-0 transition-all duration-300;
-  }
-
-  .scrollbar-x:hover::-webkit-scrollbar {
     @apply h-1;
   }
 
