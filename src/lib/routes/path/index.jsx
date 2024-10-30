@@ -9,7 +9,6 @@ export const PATH = {
     CHILDREN: {
       INTRODUCTION: "introduction",
       INSTALLATION: "installation",
-      COMPONENTS: "components",
       TYPOGRAPHY: "typography",
       COLORS: "colors",
     },
@@ -21,9 +20,7 @@ export const PATH = {
       NEXT: "next",
       VITE: "vite",
       MANUAL: "manual",
-      LARAVEL: "laravel",
-      NUXT: "nuxt",
-      GATSBY: "gatsby",
+      LARAVEL: "laravel"
     },
   },
   COMPONENTS: {
@@ -31,6 +28,12 @@ export const PATH = {
     CHILDREN: {
       ALERT: "alert",
       AVATAR: "avatar",
+      BADGE: "badge",
+      BREADCRUMB: "breadcrumb",
+      BUTTON: "button",
+      CARD: "card",
+      CHECKBOX: "checkbox",
+      INPUT: "input",
     },
   },
 };

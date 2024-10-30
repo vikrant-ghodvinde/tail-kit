@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import AppBreadcrumb from "@/components/AppBreadcrumb/AppBreadcrumb";
 import AppLayout from "@/components/AppLayout/AppLayout";
 import {

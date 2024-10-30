@@ -2,21 +2,23 @@ import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATH } from "../path";
 import Home from "@/pages/Home/Home";
-// import Components from "@/pages/Components/Components";
-import Button from "@/pages/Components/elements/Button/Button";
-import Badge from "@/pages/Components/elements/Badge/Badge";
-import Avatar from "@/pages/Components/elements/Avatar/Avatar";
 import Introduction from "@/pages/GettingStarted/Introduction/Introduction";
 import Colors from "@/pages/GettingStarted/Colors/Colors";
-import Alert from "@/pages/Components/elements/Alert/Alert";
 import Installation from "@/pages/GettingStarted/Installation/Installation";
 import HTMLInstallation from "@/pages/Installation/HTMLInstallation/HTMLInstallation";
 import NextInstallation from "@/pages/Installation/NextInstallation/NextInstallation";
 import ViteInstallation from "@/pages/Installation/ViteInstallation/ViteInstallation";
 import ManualInstallation from "@/pages/Installation/ManualInstallation/ManualInstallation";
 import LaravelInstallation from "@/pages/Installation/LaravelInstallation/LaravelInstallation";
-import NuxtInstallation from "@/pages/Installation/NuxtInstallation/NuxtInstallation";
-import GatsbyInstallation from "@/pages/Installation/GatsbyInstallation/GatsbyInstallation";
+import Alert from "@/pages/Components/Alert/Alert";
+import Avatar from "@/pages/Components/Avatar/Avatar";
+import Badge from "@/pages/Components/Badge/Badge";
+import Button from "@/pages/Components/Button/Button";
+import Typography from "@/pages/GettingStarted/Typography/Typography";
+import Breadcrumb from "@/pages/Components/Breadcrumb/Breadcrumb";
+import Card from "@/pages/Components/Card/Card";
+import Checkbox from "@/pages/Components/Checkbox/Checkbox";
+import Input from "@/pages/Components/Input/Input";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -45,6 +47,14 @@ const Router = () => {
             element={
               <Suspense fallback={"...Loading"}>
                 <Installation />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.DOCS.CHILDREN.TYPOGRAPHY}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Typography />
               </Suspense>
             }
           />
@@ -100,22 +110,6 @@ const Router = () => {
               </Suspense>
             }
           />
-          <Route
-            path={PATH.INSTALLATION.CHILDREN.NUXT}
-            element={
-              <Suspense fallback={"...Loading"}>
-                <NuxtInstallation />
-              </Suspense>
-            }
-          />
-          <Route
-            path={PATH.INSTALLATION.CHILDREN.GATSBY}
-            element={
-              <Suspense fallback={"...Loading"}>
-                <GatsbyInstallation />
-              </Suspense>
-            }
-          />
         </Route>
 
         {/* COMPONENTS ROUTES */}
@@ -137,7 +131,7 @@ const Router = () => {
             }
           />
           <Route
-            path=""
+            path={PATH.COMPONENTS.CHILDREN.BADGE}
             element={
               <Suspense fallback={"...Loading"}>
                 <Badge />
@@ -145,10 +139,42 @@ const Router = () => {
             }
           />
           <Route
-            path=""
+            path={PATH.COMPONENTS.CHILDREN.BREADCRUMB}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Breadcrumb />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.COMPONENTS.CHILDREN.BUTTON}
             element={
               <Suspense fallback={"...Loading"}>
                 <Button />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.COMPONENTS.CHILDREN.CARD}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Card />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.COMPONENTS.CHILDREN.CHECKBOX}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Checkbox />
+              </Suspense>
+            }
+          />
+          <Route
+            path={PATH.COMPONENTS.CHILDREN.INPUT}
+            element={
+              <Suspense fallback={"...Loading"}>
+                <Input />
               </Suspense>
             }
           />

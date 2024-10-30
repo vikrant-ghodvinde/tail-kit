@@ -1,11 +1,9 @@
 import AppBreadcrumb from "@/components/AppBreadcrumb/AppBreadcrumb";
 import AppLayout from "@/components/AppLayout/AppLayout";
 import {
-  GatsbyIcon,
   Html5Icon,
   LaravelIcon,
   NextJsIcon,
-  NuxtdotJsIcon,
   ReactJsIcon,
   ViteIcon,
 } from "@/icons";
@@ -63,20 +61,6 @@ const Installation = () => {
                     link={`${PATH.INSTALLATION.PARENT}/${PATH.INSTALLATION.CHILDREN.LARAVEL}`}
                     name="Laravel"
                     icon={<LaravelIcon size={45} />}
-                  />
-                </div>
-                <div className="col-span-12 sm:col-span-6 lg:col-span-4">
-                  <FrameworkCard
-                    link={`${PATH.INSTALLATION.PARENT}/${PATH.INSTALLATION.CHILDREN.NUXT}`}
-                    name="Nuxt"
-                    icon={<NuxtdotJsIcon size={45} />}
-                  />
-                </div>
-                <div className="col-span-12 sm:col-span-6 lg:col-span-4">
-                  <FrameworkCard
-                    link={`${PATH.INSTALLATION.PARENT}/${PATH.INSTALLATION.CHILDREN.GATSBY}`}
-                    name="Gatsby"
-                    icon={<GatsbyIcon size={45} />}
                   />
                 </div>
               </div>

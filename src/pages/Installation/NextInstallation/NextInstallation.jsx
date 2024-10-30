@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import AppBreadcrumb from "@/components/AppBreadcrumb/AppBreadcrumb";
 import AppLayout from "@/components/AppLayout/AppLayout";
 import {
@@ -220,8 +221,6 @@ const NextInstallation = () => {
                     Start using Tailwind in your project
                   </InstallationItemTitle>
                   <InstallationItemDescription>
-                    Add your compiled CSS file to the{" "}
-                    <code className="underline">{"<head>"}</code> and start
                     Start using Tailwind’s utility classes to style your
                     content.
                   </InstallationItemDescription>
@@ -247,7 +246,9 @@ const NextInstallation = () => {
                           <span className="block">
                             {'<h1 className="text-3xl font-bold underline">'}
                           </span>
-                          <span className="block">{"Hello world!"}</span>
+                          <div className="block ps-4">
+                            <span className="block">{"Hello world!"}</span>
+                          </div>
                           <span className="block">{"</h1>"}</span>
                         </div>
                         <span className="block">{")"}</span>

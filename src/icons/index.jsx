@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { FaGithub, FaHtml5, FaLinkedin } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa6";
-import { SiVite, SiNuxtdotjs, SiGatsby } from "react-icons/si";
+import { SiVite } from "react-icons/si";
 import { RiNextjsFill, RiReactjsFill } from "react-icons/ri";
 
 export const LightThemeIcon = (props) => {
@@ -66,12 +66,4 @@ export const ReactJsIcon = (props) => {
 
 export const LaravelIcon = (props) => {
   return <FaLaravel {...props} />;
-};
-
-export const NuxtdotJsIcon = (props) => {
-  return <SiNuxtdotjs {...props} />;
-};
-
-export const GatsbyIcon = (props) => {
-  return <SiGatsby {...props} />;
 };

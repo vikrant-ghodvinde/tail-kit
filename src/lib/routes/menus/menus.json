@@ -5,7 +5,6 @@
     "menu": [
       { "name": "Introduction", "path": "/docs/introduction" },
       { "name": "Installation", "path": "/docs/installation" },
-      { "name": "Components", "path": "/docs/components" },
       { "name": "Typography", "path": "/docs/typography" },
       { "name": "Colors", "path": "/docs/colors" }
     ]
@@ -18,9 +17,7 @@
       { "name": "Next.js", "path": "/docs/installation/next" },
       { "name": "Vite", "path": "/docs/installation/vite" },
       { "name": "Manual", "path": "/docs/installation/manual" },
-      { "name": "Laravel", "path": "/docs/installation/laravel" },
-      { "name": "Nuxt", "path": "/docs/installation/nuxt" },
-      { "name": "Gatsby", "path": "/docs/installation/gatsby" }
+      { "name": "Laravel", "path": "/docs/installation/laravel" }
     ]
   },
   {
