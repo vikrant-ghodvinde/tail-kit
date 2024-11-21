@@ -1,5 +1,6 @@
 import AppBreadcrumb from "@/components/AppBreadcrumb/AppBreadcrumb";
 import AppLayout from "@/components/AppLayout/AppLayout";
+import PrimaryAlert from "./components/PrimaryAlert";
 
 const Alert = () => {
   return (
@@ -12,7 +13,9 @@ const Alert = () => {
               <h1 className="text-3xl font-bold tracking-tight mb-2">Alert</h1>
               <p>Display alerts in your design for user attention.</p>
             </div>
-            <div className="relative"></div>
+            <div className="relative">
+              <PrimaryAlert />
+            </div>
           </div>
         </div>
       </section>

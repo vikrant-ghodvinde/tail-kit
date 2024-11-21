@@ -7,6 +7,9 @@ import H4Typography from "./components/H4Typography";
 import H5Typography from "./components/H5Typography";
 import H6Typography from "./components/H6Typography";
 import PTypography from "./components/PTypography";
+import SmallTypography from "./components/SmallTypography";
+import LargeTypography from "./components/LargeTypography";
+import BlockquoteTypography from "./components/BlockquoteTypography";
 
 const Typography = () => {
   return (
@@ -44,7 +47,15 @@ const Typography = () => {
             <div className="relative">
               <PTypography />
             </div>
-            <div className="relative"></div>
+            <div className="relative">
+              <LargeTypography />
+            </div>
+            <div className="relative">
+              <SmallTypography />
+            </div>
+            <div className="relative">
+              <BlockquoteTypography />
+            </div>
           </div>
         </div>
       </section>

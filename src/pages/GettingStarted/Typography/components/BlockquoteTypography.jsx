@@ -4,28 +4,30 @@ import {
   PreviewBox,
 } from "@/components/CodePreview/CodePreview";
 
-const PTypography = () => {
+const BlockquoteTypography = () => {
   return (
     <div className="relative">
       <div className="relative w-full pb-2 border-b border-b-black/5 dark:border-b-white/15">
-        <h3 className="text-lg font-semibold">p</h3>
+        <h3 className="text-lg font-semibold">Small</h3>
       </div>
       <CodePreview
         preview={
           <PreviewBox>
-            <p className="leading-7 [&:not(:first-child)]:mt-6 text-black dark:text-white">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-              deleniti eligendi harum quidem ut praesentium.
-            </p>
+            <blockquote className="mt-6 border-l-2 pl-6 italic text-black dark:text-white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              culpa perferendis aliquam! Perferendis qui quidem quam
+              voluptatibus recusandae, quaerat, repellendus rerum quod beatae
+              rem neque quasi maiores nobis dolor sapiente.
+            </blockquote>
           </PreviewBox>
         }
         code={
           <CodeBox
             code={`export default function App() {
                         return (
-                          <p className="leading-7 [&:not(:first-child)]:mt-6">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, deleniti eligendi harum quidem ut praesentium.
-                          </p>
+                          <blockquote className="text-sm font-medium leading-none">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem culpa perferendis aliquam! Perferendis qui quidem quam voluptatibus recusandae, quaerat, repellendus rerum quod beatae rem neque quasi maiores nobis dolor sapiente.
+                          </blockquote>
                         )
                       }`}
           >
@@ -39,16 +41,18 @@ const PTypography = () => {
                 <span className="block">{"return ("}</span>
                 <div className="block ps-4">
                   <span className="block">
-                    {'<p className="leading-7 [&:not(:first-child)]:mt-6">'}
+                    {
+                      '<blockquote className="text-sm font-medium leading-none">'
+                    }
                   </span>
                   <div className="block ps-4">
                     <span className="block">
                       {
-                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, deleniti eligendi harum quidem ut praesentium."
+                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem culpa perferendis aliquam! Perferendis qui quidem quam voluptatibus recusandae, quaerat, repellendus rerum quod beatae rem neque quasi maiores nobis dolor sapiente."
                       }
                     </span>
                   </div>
-                  <span className="block">{"</p>"}</span>
+                  <span className="block">{"</blockquote>"}</span>
                 </div>
                 <span className="block">{")"}</span>
               </div>
@@ -63,4 +67,4 @@ const PTypography = () => {
   );
 };
 
-export default PTypography;
+export default BlockquoteTypography;

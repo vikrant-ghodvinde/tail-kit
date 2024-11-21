@@ -8,7 +8,7 @@ const H4Typography = () => {
   return (
     <div className="relative">
       <div className="relative w-full pb-2 border-b border-b-black/5 dark:border-b-white/15">
-        <h3 className="text-xl font-semibold">h4</h3>
+        <h3 className="text-lg font-semibold">h4</h3>
       </div>
       <CodePreview
         preview={
